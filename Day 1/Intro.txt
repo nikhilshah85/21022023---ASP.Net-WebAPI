@@ -1,0 +1,67 @@
+Understand What, why, where, how and when webapi is used
+REST and WebAPI
+
+1. Create a webapi solution
+	With Inmemory collection
+	With EF Core and SQL Server
+2. Consume WebAPI in your application 
+	Client Side 
+	Server side
+--------------------------------------------------
+
+
+
+
+Lab / Software 
+1. Visual Studio 2019 or above
+	.net core 6.0 or above
+2. SQL Server
+----------------------------
+1. Installed them on machine
+2. Use Cloud lab
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+					Data is an very important part of any application
+
+				1. Share the data with other projects, with clients, with teams etc.. 
+					but no one will want to share the data access
+
+
+				REST - Representation State Transfer 
+					this is a standard by W3C and ECMA for data exchange in a light weight format
+					based on Http Protocol standards
+
+					Microsoft followed this standards, create framework, compilers, classes, methods, tools etc
+						and named it as WebAPI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
