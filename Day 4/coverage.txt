@@ -1,0 +1,3 @@
+This week - Create a web api and share the url with clients / customers / teams etc...
+Next week - you will learn the other side of webapi
+		how to consume the data / url shared by client

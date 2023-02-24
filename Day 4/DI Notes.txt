@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+As a developer we have been createing a lot of objects in other classes
+
+But we never write any code to destroy the object, destructor, dispose() - method
+
+Because - GC come and clear the resource
+
+But this days, number of users has increased a lot and keeps on increasing
+
+------------------------------------
+		Thus newer framework this days, says do not create any Object inside other classes
+
+		Let framework create those object and inject, and framework will also destroy the same based on 3 method configuration
+
+			There are 3 methods in .net core to specify when to destroy the object 
+
+			a. AddTranscient - create new object for every call and destroy the object once output is processed
+				PerCall - use for dynamic data - eg. stock market rates, cricket score etc...
+			b. AddScoped - create a new object for every user and destroy the object when user session is over
+				PerSession - user specific data - Bankaccount
+			c. AddSingeTon - create a new object on start of application and destroy when applicaiton stops
+				SingleTon - use
+
+
+		This is implemented in 2 steps
+			1. inside the class where u want object of other class, 
+	         		create a new variable (do not instantiate it) - eg. Employee _empObj;
+		             create a constuctor with a parameter of that class, (this the reference to object created by framework)
+			2. In program.cs - use 1 of the method discussed above 
+
+
+
+
+

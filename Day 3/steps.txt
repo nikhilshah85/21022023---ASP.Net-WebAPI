@@ -1,0 +1,28 @@
+
+
+
+1. API Projects
+2. WebAPI with CRUD - with in memory collection
+3. WebAPI with database - EF Core - with SQL Server
+	1. create a new database with table and sample data
+	2. create a new webapi application
+	3. ADO / EF Core - we will have to install Nuget packages
+		EF Core - 4 packages needs to be installed
+			Microsoft.EntityFrameworkCore.Tools
+			Microsoft.EntityFrameworkCore.Design
+			Microsoft.EntityFrameworkCore
+			Microsoft.EntityFrameworkCore.SqlServer
+	4. Tools -> Nuget Package manager - Console
+	5. Scaffold-DbContext "server=(localdb)\MSSQLLocalDB;database=shoppingDB;integrated security=true" -OutputDir Models\EF -Provider Microsoft.EntityFrameworkCore.SqlServer
+	6. Add new API controller with EF - Choose the table name as Model and Database Name as Context
+	7. Once created, it uses DI by default, it will configure only half part of DI, but since we do not know what is DI and how to 		use it,  thus we will not use it
+	8. Instantiate new object of DBContext class, line 16
+		private readonly ShoppingDbContext _context = new ShoppingDbContext();
+	9. Comment the constructor provided
+		 //public ProductsController(ShoppingDbContext context)
+        //{
+        //    _context = context;
+        //}
+	10. Build the application, run the application, and test the functionality
+
+		

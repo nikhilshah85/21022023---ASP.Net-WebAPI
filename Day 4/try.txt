@@ -1,0 +1,6 @@
+Try:
+In the same application, use EF core, to create poco classes of tables we created yesterday,
+	we had 2 tables, products and customers, 
+		we want to create an api for both the tables, to perform crud operations
+		
+		Use DI - do not create any objects
