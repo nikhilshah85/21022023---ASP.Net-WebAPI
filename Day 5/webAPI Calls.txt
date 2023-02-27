@@ -1,0 +1,20 @@
+
+
+
+		1. Craete a webapi - in memory collection and with EF Core and SQl Server
+		2. Consume WebAPI - 
+				Client End - useing Javascript(JQuery, Ajax, Axios etc..) - allows Get, Put, Post, Delete
+					This is Fastest 
+					Not secure - not to be used for critical data
+				Server End - C# - HttpClient - allows Get, Put, Post, Delete
+
+
+					Both of above are a part of standards
+
+				fetch API - part of REST standards for client end calls
+				HttpClient - part of REST standards for server end calls
+
+	-----------------------------------------------------------------------------------------------------
+			fetch(url).then( responseDataFormat => responseDataFormat.json())  -- this method needs the dataformat
+				  .then( resultData => { code to display resultData in HTML } ) -- this is the data - table, div etc..
+				  .catch( errorDetails => { code to display error }) 

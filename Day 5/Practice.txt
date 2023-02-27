@@ -1,0 +1,27 @@
+
+Practice - Add 2 more actions on SocialMediaController
+
+	public Iactionresult Comments()
+	{
+		return view();
+	}
+
+	public Iactionresult users()
+	{
+		return view();
+	}
+
+	------Add view for both of them and display the data on a page
+
+
+Simple 1
+	https://jsonplaceholder.typicode.com/comments
+
+	Display data in table on click of button
+
+
+Real world - kind of - not complex at all
+	https://jsonplaceholder.typicode.com/users
+
+	For comments display below colunms
+	Name Email City Lat Lon CompanyName CompanyCatchpase
