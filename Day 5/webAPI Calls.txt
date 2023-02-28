@@ -18,3 +18,32 @@
 			fetch(url).then( responseDataFormat => responseDataFormat.json())  -- this method needs the dataformat
 				  .then( resultData => { code to display resultData in HTML } ) -- this is the data - table, div etc..
 				  .catch( errorDetails => { code to display error }) 
+
+
+	-------------------------------------------------------------------------------------------------------
+		Drawbacks of client end (fetch, Jquery, ajax etc...)
+			1. the script along with logic gets display to the user in inspect
+			2. Is application only for web apps - not for desktop app - background OS services - console app - librar app
+	-----------------------------------------------------------------------------------------------------------
+			Server end 
+				1. HttpClient - allows get, put post, delete
+				2. does not disclose the code to client
+				3. This is a standard object by w3c - available in all the frameowork, Angular, react, java etc..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

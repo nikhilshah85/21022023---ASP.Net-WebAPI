@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\webapiCall_HttpClient.props" />
+</Project>
