@@ -1,0 +1,31 @@
+We saw how to consume to WebAPI
+	a. Client side - fetch
+	b. Server Side - C# - HttpClient 
+
+	This was a  call to other api, which was free and open to everyone
+	But this is not the case of webapi that u create
+
+	So webapi applictions does not allow access by default - all the calls are blocked
+		by a feature called CORS - cross origin resourse shareing
+
+CORS ERROR - 
+
+Products:1 Access to fetch at 'https://localhost:7073/api/Products' from origin 'https://localhost:7003' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Products:48          GET https://localhost:7073/api/Products net::ERR_FAILED 200
+
+
+
+
+
+builder.Services.AddCors(policy =>
+{
+    policy.AddDefaultPolicy(defaultPOl =>
+    {
+        defaultPOl.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
+
+
+
+app.UseCors();
+

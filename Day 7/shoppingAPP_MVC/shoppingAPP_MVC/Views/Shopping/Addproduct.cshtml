@@ -1,0 +1,50 @@
+﻿
+
+
+<script>
+    function addNewProduct()
+    {
+        var url = "https://localhost:7073/api/products";
+        var pid = $("#pid").val();
+        var pname = $("#pname").val();
+        var pcat = $("#pcategory").val();
+        var pprice = $("#price").val();
+        var pisavailble = $("#isavailable").val();
+
+        var newProduct = {
+            "pId": pid,
+            "pName": pname,
+            "pCategory": pcat,
+            "pPrice": pprice,
+            "pIsInStock": pisavailble
+        }
+
+        console.log(newProduct);
+
+        fetch(url, newProduct).then(
+                                response => {
+                                    method: "POST",
+                                    body:JSON.stringify({newProduct})
+                                })
+                               .then(result =>{
+                                   //alert(result);
+                                   console.log(result);
+                               })
+                               .catch(err =>{
+                                   alert(err);
+                               })
+
+
+
+    }
+
+</script>
+
+
+
+    <input type="number" placeholder="Enter Product Id" id="pid" class="form-control" />
+    <input type="text" placeholder="Enter Product Name" id="pname" class="form-control" />
+    <input type="text" placeholder="Enter Product Category" id="pcategory" class="form-control" />
+    <input type="number" placeholder="Enter Product Price" id="price" class="form-control" />
+    <input type="text" placeholder="Enter Product Is In Stock" id="isavailable" class="form-control" />
+    <button class="btn btn-danger" onclick="addNewProduct()"> Add Product </button>
